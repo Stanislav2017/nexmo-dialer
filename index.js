@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res, next) => {
-    res.send('Welcome to nexmo test');
+    return res.send('Welcome to nexmo test');
 });
 
 app.get('/webhooks/answer', (req, res, next) => {
@@ -12,13 +12,12 @@ app.get('/webhooks/answer', (req, res, next) => {
         "action": "connect",
         "from": "17082310473",
         "timeout": 15,
-        "machineDetection": "hangup",
         "endpoint": [{
             "type": "phone",
             "number": to
         }]
     }];
-    res.json(ncco);
+    return res.json(ncco);
 });
 
 app.get('/webhooks/event', (req, res, next) => {
