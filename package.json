@@ -5,8 +5,8 @@
   "main": "index.js",
   "module": "commonjs",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "index app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Mykheikin Stanislav",
