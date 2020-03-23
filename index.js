@@ -28,7 +28,7 @@ app.get('/webhooks/event', (req, res, next) => {
 
 const server = http.createServer(app);
 
-const PORT = 443;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
     console.log('Server is running...');
 });
