@@ -10,8 +10,7 @@ app.get('/webhooks/answer', (req, res, next) => {
     const to = req.query.to;
     ncco = [{
         "action": "connect",
-        "from": "17082310473",
-        "eventUrl": ["https://nexmo-dialer.herokuapp.com/webhooks/event"],
+        "from": "+17082310473",
         "timeout": 15,
         "endpoint": [{
             "type": "phone",
